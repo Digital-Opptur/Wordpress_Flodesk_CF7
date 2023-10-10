@@ -84,6 +84,20 @@
 								</td>
 							</tr>
 							<tr>
+								<th scope="row">
+									Custom label
+								</th>
+								<td>
+									<fieldset>
+										<label style="width: 100%;">
+											<input name="flodesk_settings[flodesk_label]" type="text" id="flodesk_key" value="<?php echo (isset($options['flodesk_label']) && $options['flodesk_label'] != '') ? $options['flodesk_label'] : ''; ?>" style="width: 100%;"/>
+											<br />
+											<span class="description">Change the default "Subscribe to newsletter" to something else.</span>
+										</label>
+									</fieldset>
+								</td>
+							</tr>
+							<tr>
 								<th scope="row">Enable debug mode?</th>
 								<td>
 									<fieldset>
