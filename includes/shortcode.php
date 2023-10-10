@@ -19,8 +19,12 @@
 	TODO: Enable custom checkbox label 
 		  Allow user to specify it in the admin panel
 	*/
-	function flodesk_subscribe_checkbox( $tag ) {
-		return '<label class="flodesk_checkbox"><input type="checkbox" name="flodesk" id="flodesk" class="wpcf7_checkbox" style="margin-right: 10px;">Meld meg på nyhetsbrev</label>';
+	function flodesk_subscribe_checkbox( $atts ) {
+		$_atts = shortcode_atts( array(
+			'hidden' => 'hidden',
+			'checked' => 'checked',
+		), $atts );
+		return '<label class="flodesk_checkbox">foo = {'.$a['foo'].'}<input type="checkbox" name="flodesk" id="flodesk" class="wpcf7_checkbox" style="margin-right: 10px;">Meld meg på nyhetsbrev</label>';
 	}
 
 ?>
