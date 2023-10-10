@@ -3,7 +3,7 @@
 	Plugin Name:  Contact Form 7 - Flodesk
 	Plugin URI:   https://flodesk.com
 	Description:  Simple plugin to use with CF7, adding new subscribers to flodesk
-	Version:      1.0
+	Version:      1.1
 	Author:       Digital Opptur
 	Author URI:   https://digitalopptur.no
 	License:      GPL2
