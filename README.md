@@ -54,3 +54,5 @@ If you have any questions or encounter any issues, please [open an issue](https:
 ---
 
 Happy form building and Flodesk integration!
+
+Developed with ❤️ by [@Spxc](https://github.com/spxc)
