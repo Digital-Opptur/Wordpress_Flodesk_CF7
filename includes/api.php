@@ -139,4 +139,28 @@
 		*/
 		return json_decode($data['body']);
 	}
+
+	/*
+	Fetch segments
+	*/
+	function fetchCustomFields ($key) {
+		/*
+		Run GET against the REST API to fetch segments
+		Endpoint:https://api.flodesk.com/v1/segments
+		*/
+		$data = wp_remote_post('https://api.flodesk.com/v1/custom-fields', array(
+			'headers'     => array(
+				'Authorization' => 'Basic '.base64_encode($key),
+				'User-Agent' => 'Digital Opptur - Nettside',
+				'Content-Type' => 'application/json'
+			),
+			'method'      => 'GET',
+			'data_format' => 'body',
+		));
+		
+		/*
+		Return JSON result
+		*/
+		return json_decode($data['body']);
+	}
 ?>

@@ -56,7 +56,6 @@
 						settings_fields( 'flodesk_settings' );
 						do_settings_sections( __FILE__ );
 
-						//get the older values, wont work the first time
 						$options = get_option( 'flodesk_settings' ); ?>
 						<table class="form-table" style="width: 100%;">
 							<tr>
@@ -137,6 +136,33 @@
 												}
 											?>
 										</select>
+									</fieldset>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									Available custom fields
+								</th>
+								<td>
+									<fieldset>
+										<ul>
+											<?php 
+												$customfields = fetchCustomFields($options['flodesk_key']);
+												if (!$customfields->data) { 
+												?>
+													No custom fields found
+												<?php 
+												} else {
+													foreach ($customfields->data as $value) {
+													?>
+														<li><?php echo $value->label; ?></li>
+													<?php
+
+													}
+												}
+											?>
+											
+										</ul>
 									</fieldset>
 								</td>
 							</tr>
